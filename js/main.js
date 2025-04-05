@@ -140,7 +140,7 @@ function createProductCard(product) {
   col.className = "col-lg-3 col-md-6 col-sm-12 mb-4";
   col.innerHTML = `
     <div class="card h-100">
-      <img src="${product.thumbnail}" class="card-img-top product-img" alt="${product.title}">
+      <img src="${product.thumbnail}" class="card-img-top product-img" style = "object-fit:contain;" alt="${product.title}">
       <div class="card-body">
         <div class="d-flex justify-content-between mb-1">
           <span onclick="filterCategory(this)">${product.category}</span>

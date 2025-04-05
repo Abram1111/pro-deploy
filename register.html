@@ -19,6 +19,14 @@
     <nav class="navbar navbar-expand-lg grad-color">
       <div class="container-fluid">
         <a class="navbar-brand text-white" href="#">Tech Store</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
@@ -47,15 +55,16 @@
         <h2 class="text-center mb-4 decorated-font">Sign Up</h2>
         <div id="register-alert" class="alert d-none"></div>
         <div class="row mb-3">
-          <div class="col">
+          <div class="col-12 col-md-6">
             <label for="first-name" class="form-label">First Name</label>
             <input type="text" class="form-control" id="first-name" />
           </div>
-          <div class="col">
+          <div class="col-12 col-md-6">
             <label for="last-name" class="form-label">Last Name</label>
             <input type="text" class="form-control" id="last-name" />
           </div>
         </div>
+
         <div class="mb-3">
           <label for="register-email" class="form-label">Email address</label>
           <input type="email" class="form-control" id="register-email" />

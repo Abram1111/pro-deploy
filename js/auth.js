@@ -38,6 +38,27 @@ document.addEventListener("DOMContentLoaded", () => {
       const password = document.getElementById("register-password").value;
       const confirmPassword = document.getElementById("confirm-password").value;
       const alertBox = document.getElementById("register-alert");
+      // Validate email format
+      if (email === "") {
+        alertBox.textContent = "Email is required";
+        alertBox.className = "alert alert-danger";
+        alertBox.classList.remove("d-none");
+        return;
+      }
+      if (email.indexOf("@") === -1 || email.indexOf(".") === -1) {
+        alertBox.textContent = "Invalid email format";
+        alertBox.className = "alert alert-danger";
+        alertBox.classList.remove("d-none");
+        return;
+      }
+
+      // Validate password length
+      if (password.length < 6) {
+        alertBox.textContent = "Password must be at least 6 characters long";
+        alertBox.className = "alert alert-danger";
+        alertBox.classList.remove("d-none");
+        return;
+      }
       // Validate password confirmation
       if (password !== confirmPassword) {
         alertBox.textContent = "Passwords do not match";
